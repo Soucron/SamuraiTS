@@ -1,1 +1,34 @@
+.app-wrapper {
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+    grid-template-areas:
+    "header header"
+    "navbar content";
+    width: 1200px;
+
+}
+
+.header {
+    grid-area: header;
+    background-color: red;
+
+}
+
+.header img {
+    width: 20px
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: green;
+    height: 100%;
+}
+
+.content {
+    grid-area: content;
+    background-color: blue;
+    height: 100%;
+}
 
