@@ -1,22 +1,25 @@
 import React from 'react';
+import {Route, Routes, BrowserRouter} from 'react-router-dom';
 import './App.css';
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
 import Profile from "./Components/Profile/Profile";
 import Dialogs from "./Components/Dialogs/Dialogs";
-import {BrowserRouter, Route} from "react-router-dom";
+
+
 
 
 function App() {
-    return (
-        <BrowserRouter>
+    return (<BrowserRouter>
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>
                 <div className="app-wrapper-content">
-                    <Route path="/dialogs/*" component={Dialogs}/>
-                    <Route path="/profile" component={Profile}/>
+                    <Routes>
+                    <Route path="/dialogs/*" element={<Dialogs/>}/>
+                    <Route path="/profile/" element={<Profile/>}/>
+                </Routes>
                 </div>
                 <Footer/>
             </div>
@@ -25,3 +28,11 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
