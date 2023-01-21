@@ -10,7 +10,7 @@ const Post = (props: PostPropsType) => {
     return (
         <div className={s.item}>
             <img src="https://www.reduceimages.com/img/char-1.png"/>
-            {props.message}
+                {props.message}
             <div>
                 <span>like: {props.likeCount}</span>
             </div>
